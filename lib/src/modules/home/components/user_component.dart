@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:usfranelinha_frontend/src/routes/routes_name.dart';
 
 class UserComponent extends StatelessWidget {
   const UserComponent({super.key});
@@ -25,7 +26,11 @@ class UserComponent extends StatelessWidget {
           'Daniel Petroni',
           style: TextStyle(fontSize: 22),
         ),
-        const Icon(Icons.logout)
+        IconButton(
+          icon: const Icon(Icons.logout),
+          onPressed: () =>
+              Navigator.pushReplacementNamed(context, RoutesName.loginPage),
+        )
       ],
     );
   }
